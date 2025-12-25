@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "phoneutils"
+version = "0.1.0"
+description = "Phone utils"
+authors = ["ffprivacy <ffprivacy@netcourrier.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+toml = "^0.10.2"
+pillow = ">=9.0.0"
+protobuf = ">=5.29.3"
+androguard = ">=4.1.3" # 3.4.0a1 for droidbot
+jsbeautifier = ">=1.15.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+phoneutils = 'phoneutils.main:main'
